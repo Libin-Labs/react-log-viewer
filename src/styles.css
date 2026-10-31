@@ -1,0 +1,60 @@
+.lp-log {
+  --lp-log-background: #14202c;
+  --lp-log-color: #edf2f7;
+  --lp-log-error: #ffb1b1;
+  font:
+    13px/1.5 ui-monospace,
+    monospace;
+}
+.lp-log__viewport {
+  background: var(--lp-log-background);
+  color: var(--lp-log-color);
+}
+.lp-log__line {
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+}
+.lp-log__line--warn {
+  color: #ffe08a;
+}
+.lp-log__line--error,
+.lp-log__line--fatal {
+  color: var(--lp-log-error);
+}
+.lp-log__line--trace,
+.lp-log__line--debug {
+  opacity: 0.8;
+}
+.lp-log__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.lp-log__controls fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lp-log__select {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.lp-log :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+.lp-log__status {
+  display: block;
+  margin-top: 0.5rem;
+}
